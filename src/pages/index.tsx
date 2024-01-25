@@ -1,11 +1,5 @@
-import { Heading, Container } from "@radix-ui/themes";
+import NameCard from "@/components/NameCard";
 
 export default function Home() {
-  return (
-    <Container>
-      <Heading size="9" align="center">
-        Nay Htet Kyaw
-      </Heading>
-    </Container>
-  );
+  return <NameCard />;
 }
