@@ -4,14 +4,14 @@ import { IconLocationFilled, IconHome } from "@tabler/icons-react";
 
 export default function NameCard() {
   return (
-    <Container className="flex justify-center items-center h-screen text-gray-400">
+    <Container className="flex justify-center h-screen text-gray-400">
       <Flex gap="4" align="center" direction="column">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Heading as="h1" size="9" className="">
+          <Heading as="h1" className="text-5xl sm:text-7xl">
             Nay Htet Kyaw
           </Heading>
         </motion.div>
