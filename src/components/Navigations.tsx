@@ -7,25 +7,6 @@ interface NavigationProps {
     link: string;
 }
 
-//create an array of tile and subtitle
-const navigationData: NavigationProps[] = [
-    {
-        title: "Home",
-        link: "/index",
-    },
-    {
-        title: "About",
-        link: "/About",
-    },
-    {
-        title: "Projects",
-        link: "/Projects",
-    },
-    {
-        title: "Contact",
-        link: "/Contact",
-    },
-];
 
 export default function Navigation({ title, link }: NavigationProps) {
     return (
