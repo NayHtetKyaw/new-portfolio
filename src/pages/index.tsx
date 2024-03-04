@@ -6,7 +6,7 @@ export default function Home() {
     <>
         <Navigation/>
         <NameCard />;
-      //let's make updates
+      //TODO: updates ps
     </>
   )
 }
