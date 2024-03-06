@@ -7,9 +7,11 @@ export default function NameCard() {
     <Container className="flex justify-center h-screen text-gray-400">
       <Flex gap="4" align="center" direction="column">
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          animate={{
+            scale: [1, 2, 2, 2, 1],
+            rotate: [0, 90, 360, 90, 0],
+            borderRadius: ["20%", "35%", "50%", "35%", "20%"],
+          }}
         >
           <Heading as="h1" className="text-5xl sm:text-7xl">
             Nay Htet Kyaw
