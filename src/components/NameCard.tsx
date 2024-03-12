@@ -68,45 +68,6 @@ export default function NameCard() {
         </motion.ul>
       </Flex>
  
-export function MyReviewCard({ review, onEditReview, onDeleteReview }: ReviewCardProps) {
-	const [opened, { open, close }] = useDisclosure(false);
-	const [updatedReview, setUpdatedReview] = useState<Review>(review);
-
-	const handleEditReview = () => {
-		review = updatedReview ? updatedReview : review;
-		open;
-	};
-
-	const handleDeleteReview = () => {
-		//TODO: implement delete review
-		console.log("Delete review");
-	};
-
-	return (
-		<>
-			<Card
-				bg="gray.9"
-				padding="md"
-				radius="md"
-				withBorder
-				className={`border-${getStatusColor(review.status)}-500`}
-			>
-				<Flex direction="row" gap="md" justify="center">
-					{/* user profile and badges */}
-					<Flex
-						direction="column"
-						align="center"
-						gap="4"
-						justify="center"
-						className="max-w-sm text-center"
-						visibleFrom="md"
-					>
-						<Avatar size="70" src={null} alt="anonymous profile" />
-						<Text>You</Text>
-						<Badge color={getStatusColor(review.status)}>{review.status}</Badge>
-					</Flex>
-
-					{/* review and ratings */}
 
 					<Flex direction="column" justify="flex-start" ml="3" gap="xs" w="100%">
 						<Badge color={getStatusColor(review.status)} hiddenFrom="md">
