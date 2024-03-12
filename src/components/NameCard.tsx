@@ -67,24 +67,7 @@ export default function NameCard() {
           </Box>
         </motion.ul>
       </Flex>
-     
-interface ReviewCardProps {
-	review: Review;
-	// TODO: add 2 callbacks: onEditReview, onDeleteReview (only for MyReviewCard)
-	onEditReview: () => void;
-	onDeleteReview: () => void;
-}
-
-const getStatusColor = (status: string): string => {
-	switch (status) {
-		case "PENDING":
-			return "yellow";
-		case "REJECTED":
-			return "red";
-		default:
-			return "green";
-	}
-};
+ 
 
 export function ReviewCard({ review }: ReviewCardProps) {
 	return (
