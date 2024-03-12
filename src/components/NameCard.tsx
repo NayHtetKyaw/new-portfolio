@@ -67,26 +67,7 @@ export default function NameCard() {
           </Box>
         </motion.ul>
       </Flex>
-      import {
-	Avatar,
-	Badge,
-	Blockquote,
-	Card,
-	Flex,
-	Menu,
-	Rating,
-	Spoiler,
-	Text,
-	Modal,
-	TypographyStylesProvider
-} from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { IconEdit, IconDots, IconX } from "@tabler/icons-react";
-import ReactMarkdown from "react-markdown";
-import { Review } from "types/reviews";
-import WriteReviewForm from "./write-review-form";
-import { useState } from "react";
-
+     
 interface ReviewCardProps {
 	review: Review;
 	// TODO: add 2 callbacks: onEditReview, onDeleteReview (only for MyReviewCard)
