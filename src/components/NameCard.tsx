@@ -68,27 +68,6 @@ export default function NameCard() {
         </motion.ul>
       </Flex>
  
-
-
-				{/* review and ratings */}
-				<Flex direction="column" justify="flex-start" ml="3" gap="4" w="100%">
-					<Rating size="md" value={review.rating} fractions={2} defaultValue={0} readOnly />
-					<Text fw={800} size="sm">
-						Academic Year: {review.academicYear}
-					</Text>
-					<Spoiler maxHeight={75} showLabel="Show more" hideLabel="Hide">
-						<TypographyStylesProvider mt="md">
-							<ReactMarkdown>{review.description}</ReactMarkdown>
-						</TypographyStylesProvider>
-					</Spoiler>
-				</Flex>
-
-				{/* TODO: like and dislike button */}
-			</Flex>
-		</Card>
-	);
-}
-
 export function MyReviewCard({ review, onEditReview, onDeleteReview }: ReviewCardProps) {
 	const [opened, { open, close }] = useDisclosure(false);
 	const [updatedReview, setUpdatedReview] = useState<Review>(review);
