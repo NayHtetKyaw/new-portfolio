@@ -69,22 +69,6 @@ export default function NameCard() {
       </Flex>
  
 
-export function ReviewCard({ review }: ReviewCardProps) {
-	return (
-		<Card radius="md" shadow="sm">
-			<Flex direction="row" gap="lg" justify="center">
-				{/* user profile and badges */}
-				<Flex
-					visibleFrom="md"
-					direction="column"
-					align="center"
-					gap="4"
-					justify="center"
-					className="max-w-sm text-center"
-				>
-					<Avatar size="70" src={null} alt="anonymous profile" />
-					<Text>Anonymous</Text>
-				</Flex>
 
 				{/* review and ratings */}
 				<Flex direction="column" justify="flex-start" ml="3" gap="4" w="100%">
