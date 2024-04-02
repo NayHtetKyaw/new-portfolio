@@ -6,8 +6,7 @@ export default function Home() {
     <>
       <Navigation />
       <NameCard />
-{/*       <bogi bogi bang bang / baki bobi bobi bo bo */}
-      {/*       <bogi bogi bang bang / baki bobi bobi bo bo */}{/*     
+ 
     </>
   );
 }
