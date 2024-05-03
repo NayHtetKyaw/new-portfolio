@@ -4,8 +4,8 @@ import { IconLocationFilled, IconHome } from "@tabler/icons-react";
 
 export default function NameCard() {
   return (
-    <Container className="flex justify-center h-screen text-gray-400">
-      <Flex gap="4" align="center" direction="column">
+    <Container className="flex justify-center h-screen text-gray-400 z-10">
+      <Flex gap="4" align="center" direction="column" >
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}

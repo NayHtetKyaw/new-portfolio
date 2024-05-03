@@ -27,13 +27,13 @@ const navigationData: NavigationProps[] = [
     },
 ];
 
-export default function Navigation({ title, link }: NavigationProps) {
+export default function Navigation( ) {
     return (
         <Container className="w-full bg-red-300">
             <Flex justify="end" gap="3" direction="row" >
                 {navigationData.map((navigation, link) => (
                     <Link >
-
+            
                     </Link>
                 ))}
             </Flex>
