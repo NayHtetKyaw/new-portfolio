@@ -1,8 +1,29 @@
 import { Heading, Container, Flex, Text, Box } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 import { IconLocationFilled, IconHome } from "@tabler/icons-react";
+import Image from "next/image";
 
 export default function NameCard() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <Container className="flex justify-center h-screen text-gray-400 z-10">
       <Flex gap="4" align="center" direction="column" >
@@ -26,21 +47,23 @@ export default function NameCard() {
           </Text>
 
           <Box className="flex flex-row mt-2 justify-center">
-            <>
+            <motion.li variants={item} className="flex flex-row content-center">
               <IconLocationFilled size={18} className="self-center" />
-              <Text as="span" size="5" align="center" className="ml-2">
+              <Text size="5" align="center" ml={"2"}>
                 Bangkok
               </Text>
-            </>
-            <>
+            </motion.li>
+
+            <motion.li variants={item} className="flex flex-row content-center">
               <IconHome size={18} className="self-center ml-4" />
               <Text as="span" size="5" align="center" className="ml-2">
                 Myanmar
               </Text>
-            </>
+            </motion.li>
           </Box>
-        </motion.div>
+        </motion.ul>
       </Flex>
+
     </Container>
   );
 }
