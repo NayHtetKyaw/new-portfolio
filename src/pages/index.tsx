@@ -6,10 +6,9 @@ export default function Home() {
   return (
     <>
       <Container>
-        {/* <Navigation /> */}
+        <Navigation />
         <NameCard />
       </Container>
     </>
-  );
   );
 }
