@@ -1,6 +1,7 @@
 import { Heading, Container, Flex, Text, Box } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 import { IconLocationFilled, IconHome } from "@tabler/icons-react";
+import { EvervaultCard } from "@components/ui/Background-Card";
 
 export default function NameCard() {
   const item = {
@@ -12,7 +13,8 @@ export default function NameCard() {
   };
 
   return (
-    <Container className="flex justify-center h-screen text-gray-400 z-20">
+    <Container className="flex justify-center h-screen text-gray-400 z-10 max-w-lg mx-auto">
+      <EvervaultCard text="Hover"/>
         <Flex gap="4" align="center" direction="column" className=" inset-0 ">
           <motion.div
             initial={{ opacity: 0, y: -100 }}
