@@ -14,7 +14,7 @@ export default function NameCard() {
 
   return (
     <Container className="flex justify-center h-screen text-gray-400 z-10 max-w-lg mx-auto">
-      <EvervaultCard text="Hover"/>
+     
         <Flex gap="4" align="center" direction="column" className=" inset-0 ">
           <motion.div
             initial={{ opacity: 0, y: -100 }}
