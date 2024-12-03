@@ -1,17 +1,18 @@
-import { Container, Title, Text, Flex } from "@mantine/core"
+import { Container, Flex, SimpleGrid } from "@mantine/core"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <Container>
-      <Flex direction="row" justify="center">
+      <SimpleGrid cols={2}>
         <Flex direction="column" justify="center">
-          <Title order={1}>Hello !</Title>
-          <Title order={2}>Anascence</Title>
+          <Image src="/media/welcome-font1.png" alt="welcome" width={500} height={500} />
         </Flex>
 
-        <Flex direction="column" justify="center">
+        <Flex direction="column" justify="center" align="center" h="100%">
+          <Image src="/media/avatar.png" alt="avatar" width={500} height={500} />
         </Flex>
-      </Flex>
+      </SimpleGrid>
     </Container>
   );
 }

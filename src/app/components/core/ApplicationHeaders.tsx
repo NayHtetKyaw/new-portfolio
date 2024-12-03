@@ -1,11 +1,12 @@
 import {
   IconBrandGithubFilled,
   IconMail,
+  IconBrandX,
+  IconBrandBluesky,
 } from '@tabler/icons-react';
 import {
   Box,
   Burger,
-  Button,
   Flex,
   Divider,
   Title,
@@ -13,7 +14,6 @@ import {
   Drawer,
   Group,
   ScrollArea,
-  useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
@@ -71,17 +71,18 @@ export default function ApplicationHeaders() {
         <Group justify="space-between" h="100%">
           <Title order={1}>Anascence</Title>
 
-          <Group h="100%" gap={0} visibleFrom="sm">
+          <Group h="100%" gap={0} visibleFrom="sm" mr="sm">
             {navigationItems.map((item) => (
-              <div key={item.title}>
-                <NavLink component={Link} label={item.title} href={item.href} mr="sm" />
+              <div key={item.title} className="mr-5">
+                <NavLink component={Link} label={item.title} href={item.href} mr="sm" className="rounded-md text-2xl" />
               </div>
             ))}
           </Group>
 
-          <Group visibleFrom="sm">
+          <Group visibleFrom="sm" gap="md">
             <IconBrandGithubFilled cursor="pointer" />
             <IconMail cursor="pointer" />
+            <IconBrandBluesky cursor="pointer" />
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -105,6 +106,7 @@ export default function ApplicationHeaders() {
           <Group justify="center" grow pb="xl" px="md">
             <IconBrandGithubFilled cursor="pointer" />
             <IconMail cursor="pointer" />
+            <IconBrandBluesky cursor="pointer" />
           </Group>
         </ScrollArea>
       </Drawer>
