@@ -1,7 +1,6 @@
 import {
   IconBrandGithubFilled,
   IconMail,
-  IconBrandX,
   IconBrandBluesky,
 } from '@tabler/icons-react';
 import {
@@ -66,15 +65,15 @@ export default function ApplicationHeaders() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   return (
-    <Box>
+    <Box className="sticky top-0 z-50 antialiased">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Title order={1}>Anascence</Title>
 
-          <Group h="100%" gap={0} visibleFrom="sm" mr="sm">
+          <Group h="100%" gap={0} visibleFrom="sm" mr="sm" className="text-xl">
             {navigationItems.map((item) => (
               <div key={item.title} className="mr-5">
-                <NavLink component={Link} label={item.title} href={item.href} mr="sm" className="rounded-md text-2xl" />
+                <NavLink component={Link} label={item.title} href={item.href} className="rounded-md" />
               </div>
             ))}
           </Group>

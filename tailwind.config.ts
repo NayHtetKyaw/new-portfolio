@@ -12,7 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        "home-bg": "url('/media/bg1.gif')",
+      },
     },
   },
   plugins: [],
+  important: true,
 } satisfies Config;
