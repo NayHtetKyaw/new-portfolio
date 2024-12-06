@@ -1,4 +1,4 @@
-import { Card, Container, Title, Text, Flex, Center } from "@mantine/core"
+import { Card, Container, Text, Flex, Center } from "@mantine/core"
 import { IconUser, IconBriefcase, IconCake, IconFlag, IconMapPin, IconDeviceIpadHorizontalCode, IconArrowBadgeDownFilled } from "@tabler/icons-react"
 import Image from "next/image"
 import Projects from "./projects/page"

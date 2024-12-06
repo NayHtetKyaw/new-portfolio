@@ -1,4 +1,4 @@
-import { Title, Flex, Box, Container } from "@mantine/core"
+import { Title, Container } from "@mantine/core"
 
 
 export default function Projects() {
