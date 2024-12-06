@@ -36,7 +36,7 @@ export const navigationItems: NavigationItem[] = [
 
   {
     title: "Projects",
-    href: "#",
+    href: "/projects",
   },
 
   {

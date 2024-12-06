@@ -12,7 +12,6 @@ interface UserInfo {
   overview: string;
 }
 
-
 const userInformation: UserInfo[] = [
   {
     name: "Nay Htet Kyaw",
