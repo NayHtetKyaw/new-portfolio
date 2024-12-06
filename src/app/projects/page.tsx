@@ -117,7 +117,7 @@ export default function Projects() {
                 {fieldIcons.repo}
                 {item.repos?.map((repo, repoIndex) => (
                   <Link key={`${index}-repo-${repoIndex}`} href={repo.link} target="_blank">
-                    <Text>{repo.text}</Text>
+                    <Text className="text-sky-700">{repo.text}</Text>
                   </Link>
                 ))}
               </Flex>
