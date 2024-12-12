@@ -65,7 +65,7 @@ export default function ApplicationHeaders() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   return (
-    <Box className="sticky top-0 z-50 antialiased">
+    <Box className="sticky top-0 z-50 antialiased bg-neutral-950">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Title order={1}>Anascence</Title>

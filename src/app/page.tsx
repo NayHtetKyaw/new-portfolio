@@ -2,6 +2,7 @@ import { Card, Container, Text, Flex, Center } from "@mantine/core"
 import { IconUser, IconBriefcase, IconCake, IconFlag, IconMapPin, IconDeviceIpadHorizontalCode, IconArrowBadgeDownFilled } from "@tabler/icons-react"
 import Image from "next/image"
 import Projects from "./projects/page"
+import About from "./about/page"
 
 interface UserInfo {
   name: string;
@@ -70,6 +71,7 @@ export default function Home() {
         </Center>
       </Container>
       <Projects />
+      <About />
     </>
   );
 }

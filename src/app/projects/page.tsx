@@ -113,11 +113,11 @@ export default function Projects() {
                 <Text>{item.technologies}</Text>
               </Flex>
 
-              <Flex align="center" gap="sm" mb="sm">
+              <Flex align="center" gap="sm" mb="sm" className="items-center" >
                 {fieldIcons.repo}
                 {item.repos?.map((repo, repoIndex) => (
                   <Link key={`${index}-repo-${repoIndex}`} href={repo.link} target="_blank">
-                    <Text className="text-sky-700">{repo.text}</Text>
+                    <Text className="text-sky-700 text-wrap">{repo.text}</Text>
                   </Link>
                 ))}
               </Flex>
