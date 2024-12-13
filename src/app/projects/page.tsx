@@ -1,3 +1,5 @@
+"use client"
+
 import { Box, Stack, Title, Text, Container, Card, Flex } from "@mantine/core";
 import { IconCode, IconLabel, IconFileDescription, IconBrandGit } from "@tabler/icons-react";
 import Link from "next/link";

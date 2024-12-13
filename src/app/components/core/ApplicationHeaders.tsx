@@ -2,6 +2,7 @@ import {
   IconBrandGithubFilled,
   IconMail,
   IconBrandBluesky,
+  IconBrandLinkedin,
 } from '@tabler/icons-react';
 import {
   Box,
@@ -41,7 +42,7 @@ export const navigationItems: NavigationItem[] = [
 
   {
     title: "About me",
-    href: "#",
+    href: "/about",
   },
   {
     title: "Contact",
@@ -82,6 +83,7 @@ export default function ApplicationHeaders() {
             <IconBrandGithubFilled cursor="pointer" />
             <IconMail cursor="pointer" />
             <IconBrandBluesky cursor="pointer" />
+            <IconBrandLinkedin cursor="pointer" />
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -106,6 +108,7 @@ export default function ApplicationHeaders() {
             <IconBrandGithubFilled cursor="pointer" />
             <IconMail cursor="pointer" />
             <IconBrandBluesky cursor="pointer" />
+            <IconBrandLinkedin cursor="pointer" />
           </Group>
         </ScrollArea>
       </Drawer>

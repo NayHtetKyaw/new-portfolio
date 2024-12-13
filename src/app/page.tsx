@@ -1,8 +1,9 @@
-import { Card, Container, Text, Flex, Center } from "@mantine/core"
+import { Card, Container, Text, Flex, Center, Loader } from "@mantine/core"
 import { IconUser, IconBriefcase, IconCake, IconFlag, IconMapPin, IconDeviceIpadHorizontalCode, IconArrowBadgeDownFilled } from "@tabler/icons-react"
 import Image from "next/image"
 import Projects from "./projects/page"
 import About from "./about/page"
+import { Suspense } from "react"
 
 interface UserInfo {
   name: string;
@@ -35,9 +36,20 @@ const fieldIcons = {
 
 type UserInfoField = keyof typeof fieldIcons;
 
+const LoadingBars = () => {
+  return (
+    <Loader
+      type="bars"
+      variant="bars"
+      color="blue"
+      size="md"
+    />
+  )
+}
+
 export default function Home() {
   return (
-    <>
+    <Suspense fallback={<LoadingBars />}>
       <Container fluid className="bg-cover bg-home-bg">
         <Center className="min-h-screen flex flex-col">
           <Card radius="lg" className="bg-black/50">
@@ -72,6 +84,6 @@ export default function Home() {
       </Container>
       <Projects />
       <About />
-    </>
+    </Suspense>
   );
 }
