@@ -18,16 +18,46 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 import Link from "next/link"
+import { ReactElement } from 'react';
 
 export interface HeaderProps {
   opened: boolean;
   toggle: () => void;
 }
 
+interface SocialLink {
+  name: string;
+  link: string;
+  icon: ReactElement;
+}
+
 export interface NavigationItem {
   title: string;
   href: string;
 }
+
+const socillinks: SocialLink[] = [
+  {
+    name: "GitHub",
+    link: "https://github.com/NayHtetKyaw",
+    icon: <IconBrandGithubFilled size={25} />
+  },
+  {
+    name: "Mail",
+    link: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgmLDfsqgSmQGTrhtRvTTcTDhspsKQjNTRLpHTXVlslnSbwNNCCgxVvjQvrWhmtrrbGSV",
+    icon: <IconMail size={25} />
+  },
+  {
+    name: "BlueSky",
+    link: "https://bsky.app/profile/anascence.bsky.social",
+    icon: <IconBrandBluesky size={25} />
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/nay-htet-kyaw-0363bb1a3/",
+    icon: <IconBrandLinkedin size={25} />
+  },
+]
 
 export const navigationItems: NavigationItem[] = [
   {
@@ -49,6 +79,8 @@ export const navigationItems: NavigationItem[] = [
     href: "#",
   }
 ]
+
+
 
 function Navigation({ items }: { items: NavigationItem[] }) {
   return (
@@ -79,11 +111,13 @@ export default function ApplicationHeaders() {
             ))}
           </Group>
 
+
           <Group visibleFrom="sm" gap="md">
-            <IconBrandGithubFilled cursor="pointer" />
-            <IconMail cursor="pointer" />
-            <IconBrandBluesky cursor="pointer" />
-            <IconBrandLinkedin cursor="pointer" />
+            {socillinks.map((link, index) => (
+              <Link key={index} href={link.link} target="_blank">
+                {link.icon}
+              </Link>
+            ))}
           </Group>
 
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
@@ -104,11 +138,14 @@ export default function ApplicationHeaders() {
           <Navigation items={navigationItems} />
           <Divider my="sm" />
 
-          <Group justify="center" grow pb="xl" px="md">
-            <IconBrandGithubFilled cursor="pointer" />
-            <IconMail cursor="pointer" />
-            <IconBrandBluesky cursor="pointer" />
-            <IconBrandLinkedin cursor="pointer" />
+          <Group justify="center" grow pb="xl" px="sm">
+            {socillinks.map((link, index) => (
+              <div className="flex justify-center" key={index}>
+                <Link href={link.link} target="_blank" className="justify-self-center">
+                  {link.icon}
+                </Link>
+              </div>
+            ))}
           </Group>
         </ScrollArea>
       </Drawer>
