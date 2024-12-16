@@ -69,18 +69,15 @@ export const navigationItems: NavigationItem[] = [
     title: "Projects",
     href: "/projects",
   },
-
   {
-    title: "About me",
-    href: "/about",
+    title: "Skills",
+    href: "/skills",
   },
   {
-    title: "Contact",
-    href: "#",
-  }
+    title: "Blog",
+    href: "/blog",
+  },
 ]
-
-
 
 function Navigation({ items }: { items: NavigationItem[] }) {
   return (

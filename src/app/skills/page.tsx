@@ -1,13 +1,15 @@
 "use client"
 
-import { Container, Stack, Title, Box, Card, Flex } from "@mantine/core"
+import { Container, Text, Stack, Title, Box, Card, Flex } from "@mantine/core"
 import { ReactElement } from "react";
 import Image from "next/image"
 import React, { useState } from "react"
+import { IconBox, IconDatabaseCog, IconGhost3Filled, IconServerCog, IconWorldCode } from "@tabler/icons-react";
 
 interface Skill {
   name: string;
   icon: ReactElement;
+  techStack?: string;
 }
 
 const skills: Skill[] = [
@@ -55,15 +57,60 @@ const skills: Skill[] = [
     name: "Vim",
     icon: <Image src="/logos/vim.png" width={50} height={50} alt="Vim" />
   },
+  {
+    name: "Arch",
+    icon: <Image src="/logos/arch.png" width={50} height={50} alt="Vim" />
+  },
+];
+
+const skillSets: Skill[] = [
+  {
+    name: "Web development",
+    techStack: "NextJs, React, typescript, Php, Go",
+    icon: <IconWorldCode size={30} className="flex-shrink-0 mt-1" />
+  },
+  {
+    name: "Database management",
+    techStack: "Mysql, Postgresql, Redis, MongoDb",
+    icon: <IconDatabaseCog size={30} className="flex-shrink-0 mt-1" />
+  },
+  {
+    name: "Virtualization + Container techs",
+    techStack: "Docker, Nix",
+    icon: <IconBox size={30} className="flex-shrink-0 mt-1" />
+  },
+  {
+    name: "Linux Systems",
+    techStack: "user side, system adiministration",
+    icon: <IconGhost3Filled size={30} className="flex-shrink-0 mt-1" />
+  },
+  {
+    name: "IT operations",
+    techStack: "computer & server operations",
+    icon: <IconServerCog size={30} className="flex-shrink-0 mt-1" />
+  },
 ]
 
-export default function About() {
+export default function Skills() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null)
 
   return (
-    <Container>
+    <Container mt="md">
       <Stack>
         <Title order={1}>SKILLS</Title>
+        <Card>
+          <Box m="md">
+            {skillSets.map((skillSet, index) => (
+              <Flex key={index} gap="sm" justify="start" my="md" align="start">
+                {skillSet.icon}
+                <Box>
+                  <Text fw="bold">{skillSet.name}</Text>
+                  <Text size="sm">{skillSet.techStack}</Text>
+                </Box>
+              </Flex>
+            ))}
+          </Box>
+        </Card>
         <Card>
           <Flex direction="row" justify="center" wrap="wrap" className="group">
             {skills.map((item, index) => (

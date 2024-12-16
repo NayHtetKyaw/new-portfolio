@@ -2,7 +2,7 @@ import { Card, Container, Text, Flex, Center, Loader } from "@mantine/core"
 import { IconUser, IconBriefcase, IconCake, IconFlag, IconMapPin, IconDeviceIpadHorizontalCode, IconArrowBadgeDownFilled } from "@tabler/icons-react"
 import Image from "next/image"
 import Projects from "./projects/page"
-import About from "./about/page"
+import Skills from "./skills/page"
 import { Suspense } from "react"
 
 interface UserInfo {
@@ -82,8 +82,8 @@ export default function Home() {
           <IconArrowBadgeDownFilled size={50} className="my-5 lg:my-20 animate-bounce" />
         </Center>
       </Container>
+      <Skills />
       <Projects />
-      <About />
     </Suspense>
   );
 }
