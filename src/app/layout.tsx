@@ -8,6 +8,9 @@ import ApplicationShell from "./components/core/AppShell";
 export const metadata: Metadata = {
   title: "Anascence",
   description: "my portfolio",
+  icons: {
+    icon: "/dev.ico",
+  }
 };
 
 const theme = createTheme({

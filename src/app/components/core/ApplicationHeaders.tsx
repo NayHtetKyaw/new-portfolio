@@ -1,6 +1,6 @@
 import {
   IconBrandGithubFilled,
-  IconMail,
+  IconBrandTelegram,
   IconBrandBluesky,
   IconBrandLinkedin,
 } from '@tabler/icons-react';
@@ -44,8 +44,8 @@ const socillinks: SocialLink[] = [
   },
   {
     name: "Mail",
-    link: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgmLDfsqgSmQGTrhtRvTTcTDhspsKQjNTRLpHTXVlslnSbwNNCCgxVvjQvrWhmtrrbGSV",
-    icon: <IconMail size={25} />
+    link: "https://t.me/nayhtetkyaw",
+    icon: <IconBrandTelegram size={25} />
   },
   {
     name: "BlueSky",
@@ -79,20 +79,21 @@ export const navigationItems: NavigationItem[] = [
   },
 ]
 
-function Navigation({ items }: { items: NavigationItem[] }) {
-  return (
-    <div>
-      {items.map((item) => (
-        <Flex key={"navItems" + item.title} direction="row" wrap="wrap">
-          <NavLink component={Link} label={item.title} href={item.href} />
-        </Flex>
-      ))}
-    </div>
-  )
-}
 
 export default function ApplicationHeaders() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+
+  const Navigation = ({ items }: { items: NavigationItem[] }) => {
+    return (
+      <div>
+        {items.map((item) => (
+          <Flex key={"navItems" + item.title} direction="row" wrap="wrap">
+            <NavLink component={Link} label={item.title} href={item.href} onClick={closeDrawer} />
+          </Flex>
+        ))}
+      </div>
+    )
+  }
 
   return (
     <Box className="sticky top-0 z-50 antialiased bg-neutral-950">
