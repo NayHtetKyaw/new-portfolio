@@ -110,7 +110,7 @@ export default function Home() {
       <ActionIcon
         onClick={scrollToTop}
         variant="default"
-        size="md"
+        size="lg"
         color=""
         className="fixed bottom-6 right-6 z-50 hover:scale-110 transition-transform"
         aria-label="Scroll to top ^"

@@ -30,13 +30,15 @@ const educations: Education[] = [
 
 const EducationItem = memo(({ edu }: { edu: Education }) => (
   <Box className="my-3">
-    <Text c="dimmed">{edu.timeStamp}</Text>
-    <Flex align="center" gap="xs">
-      <IconBuilding size={25} className="flex-shrink-0" />
-      <Title order={4}>{edu.school}</Title>
+    <Flex align="center" justify="space-between">
+      <Text c="dimmed">{edu.timeStamp}</Text>
       <Link href={edu.link} target="_blank">
         <IconExternalLink size={15} className="flex-shrink-0" />
       </Link>
+    </Flex>
+    <Flex align="center" gap="xs">
+      <IconBuilding size={25} className="flex-shrink-0" />
+      <Title order={4}>{edu.school}</Title>
     </Flex>
     <Flex align="center" gap="xs">
       <IconSchool size={25} className="flex-shrink-0" />
