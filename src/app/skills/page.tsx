@@ -61,6 +61,14 @@ const skills: Skill[] = [
     name: "Arch",
     icon: <Image src="/logos/arch.png" width={50} height={50} alt="Vim" />
   },
+  {
+    name: "Kubernetes",
+    icon: <Image src="/logos/kubernetes.png" width={50} height={50} alt="Vim" />
+  },
+  {
+    name: "Kafka",
+    icon: <Image src="/logos/kafka.png" width={50} height={50} alt="Vim" />
+  },
 ];
 
 const skillSets: Skill[] = [

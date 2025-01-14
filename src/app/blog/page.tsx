@@ -52,7 +52,6 @@ const EducationItem = memo(({ edu }: { edu: Education }) => (
   </Box>
 ))
 
-
 export default function Blog() {
   return (
     <Container>

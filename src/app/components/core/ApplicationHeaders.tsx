@@ -79,7 +79,6 @@ export const navigationItems: NavigationItem[] = [
   },
 ]
 
-
 export default function ApplicationHeaders() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
@@ -108,8 +107,6 @@ export default function ApplicationHeaders() {
               </div>
             ))}
           </Group>
-
-
           <Group visibleFrom="sm" gap="md">
             {socillinks.map((link, index) => (
               <Link key={index} href={link.link} target="_blank">
@@ -117,11 +114,9 @@ export default function ApplicationHeaders() {
               </Link>
             ))}
           </Group>
-
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </header>
-
       <Drawer
         opened={drawerOpened}
         onClose={closeDrawer}

@@ -7,7 +7,7 @@ import {
   Flex,
   Center,
   Loader,
-  ActionIcon
+  ActionIcon,
 } from "@mantine/core";
 import {
   IconUser,
@@ -74,7 +74,6 @@ export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [windowheigh, setWindowHeigh] = useState<number | undefined>(undefined)
 
-
   const toggleVisibility = () => {
     if (window.scrollY > window.innerHeight) {
       setIsVisible(true)
@@ -120,7 +119,6 @@ export default function Home() {
     )
   }
 
-
   return (
     <Suspense fallback={<LoadingBars />}>
       <Container fluid className="bg-cover bg-home-bg mt-2">
@@ -161,7 +159,7 @@ export default function Home() {
       <div ref={targetRef}>
         <Skills />
       </div>
-      <Projects />
+        <Projects />
       <Blog />
       <ScrollUp />
     </Suspense>
