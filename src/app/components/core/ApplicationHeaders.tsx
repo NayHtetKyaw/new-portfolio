@@ -1,9 +1,9 @@
 import {
   IconBrandGithubFilled,
   IconBrandTelegram,
-  IconBrandBluesky,
   IconBrandLinkedin,
-} from '@tabler/icons-react';
+  IconBrandX,
+} from "@tabler/icons-react";
 import {
   Box,
   Burger,
@@ -14,11 +14,11 @@ import {
   Drawer,
   Group,
   ScrollArea,
-} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import classes from './HeaderMegaMenu.module.css';
-import Link from "next/link"
-import { ReactElement } from 'react';
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import classes from "./HeaderMegaMenu.module.css";
+import Link from "next/link";
+import { ReactElement } from "react";
 
 export interface HeaderProps {
   opened: boolean;
@@ -40,29 +40,29 @@ const socillinks: SocialLink[] = [
   {
     name: "GitHub",
     link: "https://github.com/NayHtetKyaw",
-    icon: <IconBrandGithubFilled size={25} />
+    icon: <IconBrandGithubFilled size={25} />,
   },
   {
     name: "Mail",
     link: "https://t.me/nayhtetkyaw",
-    icon: <IconBrandTelegram size={25} />
+    icon: <IconBrandTelegram size={25} />,
   },
   {
-    name: "BlueSky",
-    link: "https://bsky.app/profile/anascence.bsky.social",
-    icon: <IconBrandBluesky size={25} />
+    name: "X",
+    link: "https://x.com/anascence_",
+    icon: <IconBrandX size={25} />,
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/nay-htet-kyaw-0363bb1a3/",
-    icon: <IconBrandLinkedin size={25} />
+    icon: <IconBrandLinkedin size={25} />,
   },
-]
+];
 
 export const navigationItems: NavigationItem[] = [
   {
     title: "Home",
-    href: "/"
+    href: "/",
   },
 
   {
@@ -77,22 +77,28 @@ export const navigationItems: NavigationItem[] = [
     title: "Blog",
     href: "/blog",
   },
-]
+];
 
 export default function ApplicationHeaders() {
-  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
+    useDisclosure(false);
 
   const Navigation = ({ items }: { items: NavigationItem[] }) => {
     return (
       <div>
         {items.map((item) => (
           <Flex key={"navItems" + item.title} direction="row" wrap="wrap">
-            <NavLink component={Link} label={item.title} href={item.href} onClick={closeDrawer} />
+            <NavLink
+              component={Link}
+              label={item.title}
+              href={item.href}
+              onClick={closeDrawer}
+            />
           </Flex>
         ))}
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <Box className="sticky top-0 z-50 antialiased bg-neutral-950">
@@ -103,7 +109,12 @@ export default function ApplicationHeaders() {
           <Group h="100%" gap={0} visibleFrom="sm" mr="sm" className="text-xl">
             {navigationItems.map((item) => (
               <div key={item.title} className="mr-5">
-                <NavLink component={Link} label={item.title} href={item.href} className="rounded-md" />
+                <NavLink
+                  component={Link}
+                  label={item.title}
+                  href={item.href}
+                  className="rounded-md"
+                />
               </div>
             ))}
           </Group>
@@ -114,7 +125,11 @@ export default function ApplicationHeaders() {
               </Link>
             ))}
           </Group>
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+            hiddenFrom="sm"
+          />
         </Group>
       </header>
       <Drawer
@@ -134,7 +149,11 @@ export default function ApplicationHeaders() {
           <Group justify="center" grow pb="xl" px="sm">
             {socillinks.map((link, index) => (
               <div className="flex justify-center" key={index}>
-                <Link href={link.link} target="_blank" className="justify-self-center">
+                <Link
+                  href={link.link}
+                  target="_blank"
+                  className="justify-self-center"
+                >
                   {link.icon}
                 </Link>
               </div>
