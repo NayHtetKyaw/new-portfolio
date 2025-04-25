@@ -17,7 +17,8 @@ import {
   IconMapPin,
   IconDeviceIpadHorizontalCode,
   IconArrowBadgeDownFilled,
-  IconArrowBadgeUpFilled
+  IconArrowBadgeUpFilled,
+  IconBuildingEstate,
 } from "@tabler/icons-react";
 
 import { useScrollIntoView } from "@mantine/hooks";
@@ -35,6 +36,7 @@ interface UserInfo {
   nationality: string;
   location: string;
   overview: string;
+  work?: string;
 }
 
 const userInformation: UserInfo[] = [
@@ -44,7 +46,8 @@ const userInformation: UserInfo[] = [
     dob: "Sep 16",
     nationality: "Burmese",
     location: "Bangkok",
-    overview: "Full Stack Dev wannabe"
+    overview: "Full Stack Dev wannabe",
+    work: "Issa Compass"
   }
 ]
 
@@ -55,6 +58,7 @@ const fieldIcons = {
   nationality: <IconFlag size={25} stroke={1.5} />,
   location: <IconMapPin size={25} stroke={1.5} />,
   overview: <IconDeviceIpadHorizontalCode size={25} stroke={1.5} />,
+  work: <IconBuildingEstate size={25} stroke={1.5} />
 };
 
 type UserInfoField = keyof typeof fieldIcons;
