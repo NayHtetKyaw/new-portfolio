@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
-import "@mantine/core/styles.css"
-import { createTheme, MantineProvider } from "@mantine/core"
+import "./globals.css";
+import "@mantine/core/styles.css";
+
+import { createTheme, MantineProvider } from "@mantine/core";
+import { Analytics } from "@vercel/analytics/react";
 import ApplicationShell from "./components/core/AppShell";
 
 export const metadata: Metadata = {
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
   description: "my portfolio",
   icons: {
     icon: "/dev.ico",
-  }
+  },
 };
 
 const theme = createTheme({
@@ -27,8 +29,8 @@ const theme = createTheme({
       "#0F0F10",
       "#0A0A0B",
     ],
-  }
-})
+  },
+});
 
 export default function RootLayout({
   children,
@@ -37,12 +39,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-      >
+      <body>
         <MantineProvider theme={theme} defaultColorScheme={"dark"}>
-          <ApplicationShell>
-            {children}
-          </ApplicationShell>
+          <Analytics />
+          <ApplicationShell>{children}</ApplicationShell>
         </MantineProvider>
       </body>
     </html>
