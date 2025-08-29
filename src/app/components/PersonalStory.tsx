@@ -24,7 +24,6 @@ import {
   IconMail,
   IconBrandX,
   IconExternalLink,
-  IconHeart,
   IconCode,
   IconPalette,
   IconBrain,
@@ -61,8 +60,7 @@ export const PersonalStory: React.FC<PersonalStoryProps> = ({ data }) => {
     currentFocus:
       "Currently working as a Full Stack Developer at Issa Compass, where I mostly work on internal products and services to help the company products, and handle operations.",
 
-    philosophy:
-      "A good programmer isn't the one who writes the prettiest code, neither the one who solve the problems most effectively. It's whoever uses VIM: Change My Mind :P",
+    philosophy: `A good programmer isn&apos;t the one who writes the prettiest code, neither the one who solve the problems most effectively. It&apos;s whoever uses VIM: Change My Mind :P`,
   };
 
   const educations = [
@@ -855,7 +853,7 @@ export const PersonalStory: React.FC<PersonalStoryProps> = ({ data }) => {
         >
           <Stack gap="md">
             <Title order={3} style={{ color: "#ffffff", textAlign: "center" }}>
-              I just like it that's it :D
+              I just like it that&apos;s it :D
             </Title>
           </Stack>
         </Modal>
