@@ -10,12 +10,9 @@ interface ApplicationShellProps {
 
 export default function ApplicationShell({ children }: ApplicationShellProps) {
   return (
-    <AppShell padding="md">
+    <AppShell>
       <ApplicationHeaders />
-      <AppShell.Main>
-        {children}
-      </AppShell.Main>
+      <AppShell.Main>{children}</AppShell.Main>
     </AppShell>
   );
 }
-
