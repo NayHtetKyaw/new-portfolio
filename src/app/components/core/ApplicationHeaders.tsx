@@ -45,7 +45,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "X",
-    link: "https://x.com/anascence_",
+    link: "https://x.com/m0usuk0shidake",
     icon: <IconBrandX size={22} />,
   },
   {
